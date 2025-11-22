@@ -6,7 +6,7 @@ import QuizQuestion from './components/QuizQuestion';
 import QuizResults from './components/QuizResults';
 import FinalResults from './components/FinalResults';
 
-const socket = io('http://localhost:3000');
+const socket = io('https://quizgame-fr20.onrender.com/');
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -93,7 +93,7 @@ function App() {
 
   const createSession = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/session/create', {
+      const response = await fetch('https://quizgame-fr20.onrender.com/api/session/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
